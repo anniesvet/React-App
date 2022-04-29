@@ -1,9 +1,9 @@
-import './App.css';
+import styles from './App.css';
 import StudyCard from './components/StudyCard';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <StudyCard />
     </div>
   );

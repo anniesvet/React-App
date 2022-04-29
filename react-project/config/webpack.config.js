@@ -354,6 +354,22 @@ module.exports = function (webpackEnv) {
             // TODO: Merge this config once `image/avif` is in the mime-db
             // https://github.com/jshttp/mime-db
             {
+              test: /\.css$/i,
+              exlude: /node_modules/,
+              mimetype: 'image/avif',
+              use: [
+                'style-loader',
+                {
+                  loader:
+                  'css-loader',
+                  options: {
+                    modules: true,
+                  },
+                },
+              ],
+            },
+
+            {
               test: [/\.avif$/],
               type: 'asset',
               mimetype: 'image/avif',
