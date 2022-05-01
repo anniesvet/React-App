@@ -356,7 +356,6 @@ module.exports = function (webpackEnv) {
             {
               test: /\.css$/i,
               exlude: /node_modules/,
-              mimetype: 'image/avif',
               use: [
                 'style-loader',
                 {
