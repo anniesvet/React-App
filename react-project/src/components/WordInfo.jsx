@@ -30,7 +30,7 @@ function WordInfo () {
         }
         {
         words.map((word) =>
-        <EditReadList id={word.id}></EditReadList>
+        <EditReadList isEdit={word.isEdit}></EditReadList>
         ) 
         }
         </div>
