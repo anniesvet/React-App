@@ -1,8 +1,12 @@
 import React from "react";
+import headerStyles from '../assets/styles/Header.module.css';
+
 
 function Header () {
     return (
-        <div>Header</div>
+        <header>
+            <h1 className={headerStyles.name}>Изучение иностранных слов по карточкам</h1>
+        </header>
     )
 }
 
