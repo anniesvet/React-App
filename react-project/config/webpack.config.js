@@ -355,7 +355,7 @@ module.exports = function (webpackEnv) {
             // https://github.com/jshttp/mime-db
             {
               test: /\.css$/i,
-              exlude: /node_modules/,
+              exclude: /node_modules/,
               use: [
                 'style-loader',
                 {
