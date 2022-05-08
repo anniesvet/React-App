@@ -2,7 +2,9 @@ import React from "react";
 
 function StudyCard () {
     return (
-        <div>StudyCard</div>
+        <div className="wrapper">
+            
+        </div>
     )
 }
 
