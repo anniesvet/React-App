@@ -24,15 +24,9 @@ function WordInfo () {
     return (
         <div>
         {
-        words.map((word) =>
-        <ReadList id={word.id} english={word.english} transcription={word.transcription} russian={word.russian} isEdit={word.isEdit}></ReadList>
-        ) 
-        }
-        {
-        words.map((word) =>
-        <EditReadList isEdit={word.isEdit}></EditReadList>
-        ) 
-        }
+        words.map((word) => (
+            word.isEdit === true ? <EditReadList isEdit={word.isEdit}></EditReadList> : <ReadList id={word.id} english={word.english} transcription={word.transcription} russian={word.russian} isEdit={word.isEdit}></ReadList>
+        ))}
         </div>
     )
 }
