@@ -4,7 +4,7 @@ import CardButton from "../components/CardButton"
 import Translate from "../components/Translate"
 
 function StudyCard () {
-    const [button, clickButton] = useState(<CardButton / >);
+    const [button, clickButton] = useState(<CardButton/>);
 
     const handleClick = () => {
         clickButton(<Translate />)

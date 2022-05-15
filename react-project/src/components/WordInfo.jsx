@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from "react";
-import Buttons from "./DeleteEditButtons";
 import EditReadList from "./EditReadList";
 import ReadList from "./ReadList";
 
 let words = [
-    {id:1, english:"carrot",transcription:"[ ˈkærət ]",russian:"морковь", isEdit:true},
+    {id:1, english:"carrot",transcription:"[ ˈkærət ]",russian:"морковь", isEdit:false},
     {id:2, english:"buttefly",transcription:"[ ˈbʌtəflaɪ ]",russian:"бабочка", isEdit:false},
     {id:3, english:"street", transcription:"[ stri:t ]", russian:"улица", isEdit:false},
     {id:4,english:"car",transcription:"[ kɑ: ]",russian:"автомобиль", isEdit:false},
@@ -26,19 +24,12 @@ let words = [
 
 function WordInfo () {
 
-    const [edit, setEdit] = useState(false)
-
-    const handleEditState = () => {
-        setEdit(true)
-        console.log("Я нажата")
-    }
-
     return (
         <div>
-        <button onClick={handleEditState}>Редактировать</button>
+        
         {
         words.map((word) => (
-            edit ? <EditReadList /> : <ReadList id={word.id} english={word.english} transcription={word.transcription} russian={word.russian}></ReadList> 
+            <ReadList id={word.id} english={word.english} transcription={word.transcription} russian={word.russian} />
         ))}
         </div>
     )

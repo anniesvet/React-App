@@ -1,7 +1,7 @@
 import React from "react";
 import ReadListStyles from '../assets/styles/ReadList.module.css';
-import Buttons from './DeleteEditButtons';
 import SaveButton from "./SaveButton";
+
 
 function EditReadList (props) {
     return (
@@ -10,7 +10,7 @@ function EditReadList (props) {
             <div className={ReadListStyles.word}><input type="text"></input></div>
             <div className={ReadListStyles.word}><input type="text"></input></div>
             <div className={ReadListStyles.word}><input type="text"></input></div>
-            <div className={ReadListStyles.edit}><SaveButton /><Buttons /></div>
+            <div className={ReadListStyles.edit}><SaveButton /></div>
         </div>
     )
 }
