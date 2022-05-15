@@ -16,7 +16,6 @@ function StudyCard () {
                 <div className={StudyCardStyles.word}>carrot</div>
                 <div className={StudyCardStyles.transcription}>[ ˈkærət ]</div>
             </div>
-            {/* <button className={StudyCardStyles.btn} onClick={handleClick}>Проверить</button> */}
 
             <div onClick={handleClick}>{button}</div>
             

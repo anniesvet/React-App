@@ -1,8 +1,9 @@
-import React from "react";
+import {React} from "react";
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 import Buttons from './DeleteEditButtons';
 
 function ReadList (props) {
+
     return (
         <div className={ReadListStyles.wrapper}>
             <div className={ReadListStyles.number}>{props.id}</div>
