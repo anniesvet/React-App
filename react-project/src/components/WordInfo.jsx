@@ -35,7 +35,6 @@ function WordInfo (props) {
             <div className={ReadListStyles.word}><input type="text"></input></div>
             <div className={ReadListStyles.edit}>
                 <button className={ReadListStyles.btn_edit__save} onClick={handleIsEdit}>Сохранить</button>
-                <button className={ReadListStyles.btn_delete}><FaTrashAlt /></button>
             </div>
         </div>
     )
