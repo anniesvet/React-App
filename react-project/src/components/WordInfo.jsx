@@ -2,10 +2,6 @@ import {React, useState} from "react";
 import { FaPenAlt } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
-import SaveButton from '../components/SaveButton'
-import saveButtonStyles from '../assets/styles/SaveButton.module.css';
-
-
 
 function WordInfo (props) {
 

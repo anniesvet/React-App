@@ -5,7 +5,7 @@ import CardButtonStyles from '../assets/styles/CardButton.module.css';
 
 function Translate () {
     return (
-        <div className={CardButtonStyles.translate}>Морковь</div>
+        <div className={CardButtonStyles.translate}>морковь</div>
     )
 }
 
