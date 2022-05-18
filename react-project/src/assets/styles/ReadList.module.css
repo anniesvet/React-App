@@ -90,4 +90,36 @@
 }
 
 
+.inspect {
+    margin-top: 50px;
+}
 
+.btn_edit__inspect {
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(31, 114, 31);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.btn_edit__inspect:hover {
+    background-color: rgb(40, 141, 40);
+}
+
+.btn_edit__show {
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: rgb(31, 114, 31);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+}

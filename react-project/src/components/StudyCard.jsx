@@ -1,25 +1,25 @@
 import React, {useState} from "react";
 import StudyCardStyles from "../assets/styles/StudyCard.module.css";
-import CardButton from "../components/CardButton"
-import Translate from "../components/Translate"
+import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 function StudyCard () {
-    const [button, clickButton] = useState(<CardButton/>);
+    const [button, isClickButton] = useState(true);
 
     const handleClick = () => {
-        clickButton(<Translate />)
+        isClickButton(!button)
     };
 
     return (
         <div className={StudyCardStyles.wrapper}>
-            <div className={StudyCardStyles.word_info}>
-                <div className={StudyCardStyles.word}>carrot</div>
-                <div className={StudyCardStyles.transcription}>[ ˈkærət ]</div>
-            </div>
-
-            <div onClick={handleClick}>{button}</div>
-            
+        <div className={StudyCardStyles.word_info}>
+            <div className={StudyCardStyles.word}>carrot</div>
+            <div className={StudyCardStyles.transcription}>[ ˈkærət ]</div>
         </div>
+
+        <div className={ReadListStyles.inspect}>
+            {button ? <button onClick={handleClick} className={ReadListStyles.btn_edit__inspect}>Проверить</button> : <button onClick={handleClick} className={ReadListStyles.btn_edit__show}>Морковь</button>}
+        </div>
+    </div>
     )
 }
 

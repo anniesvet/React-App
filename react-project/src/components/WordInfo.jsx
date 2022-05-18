@@ -3,6 +3,7 @@ import { FaPenAlt } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
+
 function WordInfo (props) {
 
     const [isEdit, setIsEdit] = useState(true);
