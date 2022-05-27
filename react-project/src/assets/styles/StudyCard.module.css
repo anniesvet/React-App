@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 
     width: 250px;
     height: 320px;
-    border: 1px solid rgb(153, 153, 153);
+    border: 1px solid rgb(205, 205, 205);
     border-radius: 20px;
     background-color: rgb(246, 245, 245);
 
@@ -24,7 +24,7 @@
 }
 
 .transcription {
-    color:rgb(153, 153, 153)
+    color:rgb(166, 166, 166)
 }
 
 .btn {
@@ -44,3 +44,45 @@
 .btn:hover {
     background-color: rgb(51, 169, 51);
 }
+
+.btn_leftright {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: larger;
+}
+
+.btn_leftright:hover {
+    color: rgb(17, 145, 17);
+}
+
+.btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-bottom: 50px;
+
+    width: 120px;
+}
+
+
+
+.end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    width: 250px;
+    height: 320px;
+    font-weight: bold;
+    color: rgb(17, 145, 17);
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 20px;
+    background-color: rgb(246, 245, 245);
+}
+

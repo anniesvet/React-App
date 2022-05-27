@@ -1,15 +1,16 @@
 
 import styles from './App.css';
-import StudyCard from './components/StudyCard';
 import Header from './components/Header';
 import Content from "./components/Content"
 import Footer from './components/Footer';
+import CardSlider from './components/ChangeCards';
+
 
 function App() {
   return (
     <div className={styles.App}>
       <Header />
-      <StudyCard />
+      <CardSlider />
       <Content />
       <Footer />
     </div>
