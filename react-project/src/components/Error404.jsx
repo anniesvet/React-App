@@ -1,8 +1,9 @@
 import React from "react";
+import StudyCardStyles from "../assets/styles/StudyCard.module.css";
 
 function Error () {
     return (
-        <div>Ошибка 404!</div>
+        <div className={StudyCardStyles.wrapper}>Ошибка 404!</div>
     )
 }
 

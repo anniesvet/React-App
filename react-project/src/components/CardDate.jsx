@@ -19,7 +19,7 @@ let words = [
         return (
             <div>
             {
-            words.map((word) => (
+            words.map(() => (
                 <StudyCard key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} />
             ))}
             </div>

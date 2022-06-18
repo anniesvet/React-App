@@ -3,7 +3,6 @@ import SlideBox from './SliderBox';
 import StudyCard from './StudyCard';
 import StudyCardStyles from "../assets/styles/StudyCard.module.css";
 
-
 let words = [
     {id:1, english:"carrot",transcription:"[ ˈkærət ]",russian:"морковь"},
     {id:2, english:"buttefly",transcription:"[ ˈbʌtəflaɪ ]",russian:"бабочка"},
