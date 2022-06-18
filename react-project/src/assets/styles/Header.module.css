@@ -2,3 +2,40 @@
     font-size: 20px;
     color: customBlue;
 }
+
+.fixed {
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding-top: 7px;
+    padding-left: 30px;
+    padding-bottom: 7px;
+    margin-bottom: 100px;
+    width: 100vw;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.link {
+    margin-right: 50px;
+    text-decoration: none;
+
+    color: black;
+}
+
+.link:hover {  
+    font-size: 18px;
+}

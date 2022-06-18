@@ -31,7 +31,7 @@ export default function CardSlider(props) {
 
     if (currentItem >= words.length) {
         return (
-            <div>
+            <div className={StudyCardStyles.wrapper}>
                 <div className={StudyCardStyles.end}>Вы выучили все слова!</div>
             </div>
         )
