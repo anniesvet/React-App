@@ -15,9 +15,9 @@ function WordInfo (props) {
     return (
             <div className={ReadListStyles.wrapper}> 
                 <div className={ReadListStyles.number}>{props.id}</div>
-                <div className={ReadListStyles.word}> {isEdit ? props.english : <input type="text" />} </div>
-                <div className={ReadListStyles.word}>{isEdit ? props.transcription : <input type="text" />}</div>
-                <div className={ReadListStyles.word}>{isEdit ? props.russian : <input type="text" />}</div>
+                <div className={ReadListStyles.word}> {isEdit ? props.english : <input type="text" value={props.english} />} </div>
+                <div className={ReadListStyles.word}>{isEdit ? props.transcription : <input type="text" value={props.transcription}/>}</div>
+                <div className={ReadListStyles.word}>{isEdit ? props.russian : <input type="text" value={props.russian} />}</div>
                 <div className={ReadListStyles.edit}>
                     <button className={isEdit ? ReadListStyles.btn_edit : ReadListStyles.btn_edit__save} onClick={handleIsEdit}>{isEdit && <FaPenAlt />}{!isEdit && "Сохранить"}</button>
                     {isEdit && <button className={ReadListStyles.btn_delete}><FaTrashAlt /></button>}
