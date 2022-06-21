@@ -26,12 +26,12 @@
 .navbar img {
     width: 50px;
     height: 50px;
-    margin-right: 40px;
 }
 
 .link {
-    margin-right: 50px;
+    margin-right: 10px;
     text-decoration: none;
+    width: 160px;
 
     color: black;
 }
