@@ -2,12 +2,12 @@ import React from "react";
 import StudyCard from "../components/StudyCard";
 
 
-    function CardDate ( {words} ) {
+    function CardDate ({words}) {
 
         return (
             <div>
             {
-            words.map(() => (
+            words.map((word) => (
                 <StudyCard key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} />
             ))}
             </div>
