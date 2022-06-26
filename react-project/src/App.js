@@ -1,14 +1,15 @@
-
+import {React} from 'react';
 import styles from './App.css';
 import Header from './components/Header';
 import Content from "./components/Content"
 import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
+import WordInfo from './components/WordInfo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+export default function App() {
 
-  let words = [
+  const [words, setWords]  = React.useState([
     {id:1, english:"carrot",transcription:"[ ˈkærət ]",russian:"морковь"},
     {id:2, english:"buttefly",transcription:"[ ˈbʌtəflaɪ ]",russian:"бабочка"},
     {id:3, english:"street", transcription:"[ stri:t ]", russian:"улица"},
@@ -19,7 +20,12 @@ function App() {
     {id:8,english:"rabbit",transcription:"[ ˈræbɪt ]",russian:"кролик"},
     {id:9,english:"owl",transcription:"[ aʊl ]",russian:"сова"},
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
-    ];
+    ])
+
+    function updateWords () {
+      setWords(words.map((word) => {
+        <WordInfo id={word.id} english={word.english} transcription={word.transcription} russian={word.russian} />})
+      )
 
   return (
     <BrowserRouter>
@@ -27,12 +33,10 @@ function App() {
         <Header />
           <Routes>
             <Route path="game" element={<CardSlider words={words} />}/>
-            <Route exact path="/" element={<Content words={words} />}/>
+            <Route exact path="/" element={<Content words={words}/>}/>
             <Route path="*" element={<Error />}/>
           </Routes>
       </div>
     </BrowserRouter>
-  );
-}
-
-export default App;
+  )
+    }}

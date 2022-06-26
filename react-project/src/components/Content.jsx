@@ -3,8 +3,6 @@ import WordInfo from "./WordInfo";
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 
-
-
 function Content (props) {
 
     return (
