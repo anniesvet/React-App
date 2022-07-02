@@ -22,9 +22,9 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    function Handle ({english, transcription, russian}) {
+    function Handle () {
       setWords.words.map((word) => (
-        <StudyCard key={word.id} english={english} transcription={transcription} russian={russian} />
+        <StudyCard key={word.id} id={word.id} />
     ))
     }
 

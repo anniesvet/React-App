@@ -19,7 +19,7 @@ function WordInfo ({word}) {
 
     let HandleSetEnglish = (e) => {
         setEnglish(e.target.value)
-
+        Handle(word)
     }
 
     let HandleSetTranscription = (e) => {
@@ -29,10 +29,12 @@ function WordInfo ({word}) {
 
     let HandleSetRussian = (e) => {
         setRussian(e.target.value)
-        let newRussian = word.russian
-        newRussian = russian
-        console.log(russian)
     }
+
+    const Handle = (word) => {
+        console.log(word)
+    }
+
 
     return (
             <div className={ReadListStyles.wrapper}> 
