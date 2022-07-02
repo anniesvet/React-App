@@ -22,9 +22,9 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    function SetEnglish () {
+    function Handle ({english, transcription, russian}) {
       setWords.words.map((word) => (
-        <StudyCard key={word.id} english={word.english} transcription={word.transcription} russian={word.russian} />
+        <StudyCard key={word.id} english={english} transcription={transcription} russian={russian} />
     ))
     }
 
@@ -35,7 +35,7 @@ export default function App() {
         <Header />
           <Routes>
             <Route path="game" element={<CardSlider words={words} />}/>
-            <Route exact path="/" element={<Content words={words} HandleSetEnglish={SetEnglish}/>}/>
+            <Route exact path="/" element={<Content words={words} Handle={Handle}/>}/>
             <Route path="*" element={<Error />}/>
           </Routes>
       </div>
