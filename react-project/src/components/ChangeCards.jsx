@@ -6,6 +6,9 @@ import StudyCardStyles from "../assets/styles/StudyCard.module.css";
 
 export default function CardSlider({words}) {
     const [currentItem, setPosition] = useState(0)
+    const [button, isClickButton] = useState(false)
+    const [count, setCount] = useState(0)
+
 
     const showNext = () => {
         setPosition(currentItem + 1);
@@ -15,6 +18,17 @@ export default function CardSlider({words}) {
         if (currentItem > 0)
         setPosition(currentItem - 1);
     }
+
+
+    const handleClick = () => {
+        isClickButton(!button)
+        setCount(count + 1)
+    };
+
+    const handleClick2 = () => {
+        isClickButton(!button)
+    };
+
 
     if (currentItem >= words.length) {
         return (
@@ -32,6 +46,8 @@ export default function CardSlider({words}) {
                     english={words[currentItem].english}
                     transcription={words[currentItem].transcription}
                     russian={words[currentItem].russian}
+                    handleClick={handleClick}
+                    handleClick2={handleClick2}
                     />}> 
             </SliderBox>
         )}

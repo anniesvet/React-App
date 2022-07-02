@@ -4,18 +4,6 @@ import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 
 function StudyCard (props) {
-
-    const [button, isClickButton] = useState(false)
-    const [count, setCount] = useState(0)
-
-    const handleClick = () => {
-        isClickButton(!button)
-        setCount(count + 1)
-    };
-
-    const handleClick2 = () => {
-        isClickButton(!button)
-    };
     
     return (
     <Fragment>
@@ -26,10 +14,10 @@ function StudyCard (props) {
             </div>
 
             <div className={ReadListStyles.inspect}>
-                {button ? <button onMouseLeave={handleClick2} className={ReadListStyles.btn_edit__show}>{props.russian}</button> : <button onMouseOver={handleClick} className={ReadListStyles.btn_edit__inspect}>Проверить</button> }
+                {props.button ? <button onMouseLeave={props.handleClick2} className={ReadListStyles.btn_edit__show}>{props.russian}</button> : <button onClick={props.handleClick} className={ReadListStyles.btn_edit__inspect}>Проверить</button> }
             </div>
         </div>
-        <div>Выучено слов: {count}</div>
+        <div>Выучено слов: {props.count}</div>
     </Fragment>
     
     )

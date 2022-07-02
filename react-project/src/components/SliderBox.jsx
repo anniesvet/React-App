@@ -10,8 +10,6 @@ export default function SliderBox(props) {
             <div>{props.card}</div>
 
             <button className={StudyCardStyles.btn_leftright} onClick={props.showNext}><FaArrowRight /></button>
-
-            <div>Выучено слов: {props.count}</div>
         
         </div>
 
