@@ -9,7 +9,6 @@ export default function CardSlider({words}) {
     const [button, isClickButton] = useState(false)
     const [count, setCount] = useState(0)
 
-
     const showNext = () => {
         setPosition(currentItem + 1);
     }
@@ -28,7 +27,6 @@ export default function CardSlider({words}) {
     const handleClick2 = () => {
         isClickButton(!button)
     };
-
 
     if (currentItem >= words.length) {
         return (
