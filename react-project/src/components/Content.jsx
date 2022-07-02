@@ -10,7 +10,7 @@ function Content (props) {
         <div className={ReadListStyles.main}>
         {
         props.words.map((word) => (
-            <WordInfo key={word.id} word={word} HandleSetEnglish={props.HandleSetEnglish} HandleSetTranscription={props.HandleSetTranscription} HandleSetRussian={props.HandleSetRussian}/>
+            <WordInfo key={word.id} word={word} />
         ))}
         </div>
     )

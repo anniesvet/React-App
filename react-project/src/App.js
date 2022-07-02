@@ -24,7 +24,7 @@ export default function App() {
 
     function Handle () {
       setWords.words.map((word) => (
-        <StudyCard key={word.id} id={word.id} />
+        <Content key={word.id} id={word.id} />
     ))
     }
 
