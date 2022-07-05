@@ -7,28 +7,23 @@ import ReadListStyles from '../assets/styles/ReadList.module.css';
 function WordInfo ({word}) {
 
     const [isEdit, setIsEdit] = useState(true);
-    const [english, setEnglish] = useState(word.english)
-    const [transcription, setTranscription] = useState(word.transcription)
-    const [russian, setRussian] = useState(word.russian)
-    // const [transcription, setTranscription] = useState(props.transcription)
-    // const [russian, setRussian] = useState(props.russian)
+
+
+    const [values, setValues] = useState({
+        english: word.english,
+        transcription: word.transcription,
+        russian: word.russian
+    })
+
+
+    const handeleChange = (e) => {
+        setValues({
+            ...values, [e.target.name] : e.target.value
+        })
+    }
 
     const handleIsEdit = () => {
         setIsEdit(!isEdit) 
-    }
-
-    let HandleSetEnglish = (e) => {
-        setEnglish(e.target.value)
-        Handle(word)
-    }
-
-    let HandleSetTranscription = (e) => {
-        setTranscription(e.target.value)
-
-    }
-
-    let HandleSetRussian = (e) => {
-        setRussian(e.target.value)
     }
 
     const Handle = (word) => {
@@ -36,25 +31,29 @@ function WordInfo ({word}) {
     }
 
 
+
     return (
             <div className={ReadListStyles.wrapper}> 
                 <div className={ReadListStyles.number}>{word.id}</div>
-                <div className={ReadListStyles.word}> {isEdit ? english : <input type="text"
-                value={english}
-                onChange={HandleSetEnglish}
+                <div className={ReadListStyles.word}> {isEdit ? values.english : <input type="text"
+                value={values.english}
+                onChange={handeleChange}
+                name="english"
                 />}
                 </div>
 
-                <div className={ReadListStyles.word}>{isEdit ? transcription :
+                <div className={ReadListStyles.word}>{isEdit ? values.transcription :
                 <input type="text"
-                value={transcription}
-                onChange={HandleSetTranscription}
+                value={values.transcription}
+                onChange={handeleChange}
+                name="transcription"
                 />}
                 </div>
 
-                <div className={ReadListStyles.word}>{isEdit ? russian : <input type="text"
-                value={russian}
-                onChange={HandleSetRussian}
+                <div className={ReadListStyles.word}>{isEdit ? values.russian : <input type="text"
+                value={values.russian}
+                onChange={handeleChange}
+                name="russian"
                 />}
                 </div>
                 

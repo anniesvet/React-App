@@ -46,6 +46,8 @@ export default function CardSlider({words}) {
                     russian={words[currentItem].russian}
                     handleClick={handleClick}
                     handleClick2={handleClick2}
+                    count={count}
+                    button={button}
                     />}> 
             </SliderBox>
         )}
