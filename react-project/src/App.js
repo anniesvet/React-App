@@ -24,8 +24,8 @@ export default function App() {
     ])
 
     const updateWordItem = (...values) => {
-      console.log("должен обновиться массив")
-      const newWords = [...words, {...values}];
+      // "должен обновиться массив"
+      let newWords = [...words, {...values}];
       setWords(newWords);
       };
       
