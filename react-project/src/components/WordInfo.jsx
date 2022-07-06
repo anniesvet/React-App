@@ -23,9 +23,10 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
     const handleIsEdit = () => {
         setIsEdit(!isEdit) 
+        updateWordItem()
     }
 
-    console.log(values)
+    // console.log(values)
     return (
             <div className={ReadListStyles.wrapper}> 
                 <div className={ReadListStyles.number}>{word.id}</div>

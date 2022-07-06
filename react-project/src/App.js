@@ -4,9 +4,7 @@ import Header from './components/Header';
 import Content from "./components/Content"
 import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
-import StudyCard from './components/StudyCard';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { valid } from 'semver';
 
 export default function App() {
 
@@ -24,9 +22,10 @@ export default function App() {
     ])
 
     const updateWordItem = (...values) => {
-      // "должен обновиться массив"
-      let newWords = [...words, {...values}];
-      setWords(newWords);
+      let newWords = [...words, {...values}]
+      setWords(newWords)
+      console.log("нажали кнопку")
+      console.log(words)
       };
       
       const deleteWordItem = (id) => {
