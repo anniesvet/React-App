@@ -6,6 +6,7 @@ import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
 import StudyCard from './components/StudyCard';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { valid } from 'semver';
 
 export default function App() {
 
@@ -22,11 +23,15 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    const updateWordItem = (...values) => {
-      const newWords = [...words, {...values} ];
+    const updateWordItem = () => {
+      console.log("должен обновиться массив")
+      const newWords = [...words];
       setWords(newWords);
       };
       
+      const deleteWordItem = () => {
+        console.log("будет удаление")
+        };
 
   return (
     <BrowserRouter>
@@ -34,7 +39,7 @@ export default function App() {
         <Header />
           <Routes>
             <Route path="game" element={<CardSlider words={words} />}/>
-            <Route exact path="/" element={<Content words={words} updateWordItem={updateWordItem} />}/>
+            <Route exact path="/" element={<Content words={words} updateWordItem={updateWordItem} deleteWordItem={deleteWordItem} />}/>
             <Route path="*" element={<Error />}/>
           </Routes>
       </div>

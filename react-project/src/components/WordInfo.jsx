@@ -4,7 +4,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 
-function WordInfo ({word, updateWordItem}) {
+function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
     const [isEdit, setIsEdit] = useState(true);
 
@@ -53,7 +53,7 @@ function WordInfo ({word, updateWordItem}) {
                 
                 <div className={ReadListStyles.edit}>
                     <button className={isEdit ? ReadListStyles.btn_edit : ReadListStyles.btn_edit__save} onClick={handleIsEdit}>{isEdit && <FaPenAlt />}{!isEdit && "Сохранить"}</button>
-                    {isEdit && <button className={ReadListStyles.btn_delete}><FaTrashAlt /></button>}
+                    {isEdit && <button className={ReadListStyles.btn_delete} onClick={deleteWordItem}><FaTrashAlt /></button>}
                 </div>
             </div>
     )

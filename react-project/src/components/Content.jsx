@@ -11,7 +11,7 @@ function Content (props) {
         <div className={ReadListStyles.main}>
         {
         props.words.map((word) => (
-            <WordInfo key={word.id} word={word} updateWordItem={props.updateWordItem} />
+            <WordInfo key={word.id} word={word} updateWordItem={props.updateWordItem} deleteWordItem={props.deleteWordItem} />
         ))}
         </div>
     )
