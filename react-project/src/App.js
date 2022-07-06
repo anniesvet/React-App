@@ -22,12 +22,11 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    function Handle () {
-      setWords.words.map((word) => (
-        <Content key={word.id} id={word.id} />
-    ))
-    }
-
+    const updateWordItem = (...values) => {
+      const newWords = [...words, {...values} ];
+      setWords(newWords);
+      };
+      
 
   return (
     <BrowserRouter>
@@ -35,7 +34,7 @@ export default function App() {
         <Header />
           <Routes>
             <Route path="game" element={<CardSlider words={words} />}/>
-            <Route exact path="/" element={<Content words={words} Handle={Handle}/>}/>
+            <Route exact path="/" element={<Content words={words} updateWordItem={updateWordItem} />}/>
             <Route path="*" element={<Error />}/>
           </Routes>
       </div>

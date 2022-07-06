@@ -17,7 +17,7 @@ function StudyCard (props) {
             </div>
 
             <div className={ReadListStyles.inspect}>
-                {props.button ? <button onMouseLeave={props.handleClick2} className={ReadListStyles.btn_edit__show}>{props.russian}</button> : <button ref={ref} onClick={props.handleClick} className={ReadListStyles.btn_edit__inspect}>Проверить</button> }
+                {props.button ? <button ref={ref} onMouseLeave={props.handleClick2} className={ReadListStyles.btn_edit__show}>{props.russian}</button> : <button ref={ref} onClick={props.handleClick} className={ReadListStyles.btn_edit__inspect}>Проверить</button> }
             </div>
         </div>
         <div>Выучено слов: {props.count}</div>

@@ -6,11 +6,12 @@ import ReadListStyles from '../assets/styles/ReadList.module.css';
 function Content (props) {
 
     return (
-        
+
+    
         <div className={ReadListStyles.main}>
         {
         props.words.map((word) => (
-            <WordInfo key={word.id} word={word} />
+            <WordInfo key={word.id} word={word} updateWordItem={props.updateWordItem} />
         ))}
         </div>
     )

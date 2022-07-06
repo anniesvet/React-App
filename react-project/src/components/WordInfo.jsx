@@ -4,34 +4,28 @@ import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 
-function WordInfo ({word}) {
+function WordInfo ({word, updateWordItem}) {
 
     const [isEdit, setIsEdit] = useState(true);
-
 
     const [values, setValues] = useState({
         english: word.english,
         transcription: word.transcription,
-        russian: word.russian
+        russian: word.russian,
     })
-
 
     const handeleChange = (e) => {
         setValues({
-            ...values, [e.target.name] : e.target.value
+            ...values, [e.target.name] : e.target.value,
         })
+        updateWordItem(values)
     }
 
     const handleIsEdit = () => {
         setIsEdit(!isEdit) 
     }
 
-    const Handle = (word) => {
-        console.log(word)
-    }
-
-
-
+    console.log(values)
     return (
             <div className={ReadListStyles.wrapper}> 
                 <div className={ReadListStyles.number}>{word.id}</div>
