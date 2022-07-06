@@ -23,9 +23,9 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    const updateWordItem = () => {
+    const updateWordItem = (...values) => {
       console.log("должен обновиться массив")
-      const newWords = [...words];
+      const newWords = [...words, {...values}];
       setWords(newWords);
       };
       
