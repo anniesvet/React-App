@@ -29,9 +29,11 @@ export default function App() {
       setWords(newWords);
       };
       
-      const deleteWordItem = () => {
-        console.log("будет удаление")
-        };
+      const deleteWordItem = (id) => {
+          let newWords = [...words]
+          newWords.splice(id, 1)
+          setWords(newWords)
+          }
 
   return (
     <BrowserRouter>
