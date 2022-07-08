@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Content from "./components/Content"
 import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
+import WordInfo from './components/WordInfo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
@@ -21,12 +22,18 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    const updateWordItem = (...values) => {
-      let newWords = [...words, {...values}]
-      setWords(newWords)
-      console.log("нажали кнопку")
-      console.log(words)
+    const updateWordItem = (values) => {
+        console.log(values, values.id)
+        console.log(words)
+        setWords({
+          words: words.map(word => {
+            if (values.id = word.id) {
+              console.log("Привет")
+            } return words
+          }),
+        })
       };
+
       
       const deleteWordItem = (id) => {
           let newWords = [...words]

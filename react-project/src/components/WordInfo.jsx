@@ -9,6 +9,7 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
     const [isEdit, setIsEdit] = useState(true);
 
     const [values, setValues] = useState({
+        id: word.id,
         english: word.english,
         transcription: word.transcription,
         russian: word.russian,
@@ -16,14 +17,14 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
     const handeleChange = (e) => {
         setValues({
-            ...values, [e.target.name] : e.target.value,
+            ...values, [e.target.name] : (e.target.value)
         })
         updateWordItem(values)
     }
 
     const handleIsEdit = () => {
         setIsEdit(!isEdit) 
-        updateWordItem()
+        updateWordItem(values)
     }
 
     // console.log(values)
