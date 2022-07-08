@@ -27,7 +27,7 @@ export default function App() {
         console.log(words)
         setWords({
           words: words.map(word => {
-            if (values.id = word.id) {
+            if (values.id === word.id) {
               console.log("Привет")
             } return words
           }),
