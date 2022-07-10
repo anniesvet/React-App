@@ -133,8 +133,8 @@
 }
 
 input:invalid{
-    border-color: rgb(255, 0, 0);
-    outline: red;
+    border-color: rgb(202, 58, 18);
+    outline: rgb(186, 7, 7);
 }
 
 input {
