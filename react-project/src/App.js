@@ -23,15 +23,15 @@ export default function App() {
     ])
 
     const updateWordItem = (values) => {
-        console.log(values, values.id)
-        console.log(words)
-        setWords({
-          words: words.map(word => {
-            if (values.id === word.id) {
-              console.log("Привет")
-            } return words
-          }),
-        })
+        // console.log(values, values.id)
+        // console.log(words)
+        // setWords({
+        //   words: words.map(word => {
+        //     if (values.id === word.id) {
+        //       console.log("Привет")
+        //     } 
+        //   }),
+        // })
       };
 
       
@@ -39,6 +39,7 @@ export default function App() {
           let newWords = [...words]
           newWords.splice(id, 1)
           setWords(newWords)
+
           }
 
   return (

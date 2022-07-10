@@ -1,12 +1,12 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import { FaPenAlt } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
-
 function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
-    const [isEdit, setIsEdit] = useState(true);
+    const [isEdit, setIsEdit] = useState(
+        true);
 
     const [values, setValues] = useState({
         id: word.id,
@@ -17,7 +17,7 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
     const handeleChange = (e) => {
         setValues({
-            ...values, [e.target.name] : (e.target.value)
+            ...values, [e.target.name] : e.target.value,
         })
         updateWordItem(values)
     }
@@ -31,10 +31,12 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
     return (
             <div className={ReadListStyles.wrapper}> 
                 <div className={ReadListStyles.number}>{word.id}</div>
-                <div className={ReadListStyles.word}> {isEdit ? values.english : <input type="text"
+                <div className={ReadListStyles.word}> {isEdit ? values.english : <input 
+                type="text"
                 value={values.english}
                 onChange={handeleChange}
                 name="english"
+                required
                 />}
                 </div>
 
@@ -43,6 +45,7 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
                 value={values.transcription}
                 onChange={handeleChange}
                 name="transcription"
+                required
                 />}
                 </div>
 
@@ -50,11 +53,12 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
                 value={values.russian}
                 onChange={handeleChange}
                 name="russian"
+                required
                 />}
                 </div>
                 
                 <div className={ReadListStyles.edit}>
-                    <button className={isEdit ? ReadListStyles.btn_edit : ReadListStyles.btn_edit__save} onClick={handleIsEdit}>{isEdit && <FaPenAlt />}{!isEdit && "Сохранить"}</button>
+                    {isEdit ? <button className={ ReadListStyles.btn_edit} onClick={handleIsEdit}><FaPenAlt /></button> : <button className={ReadListStyles.btn_edit__save} disabled={!values.english || !values.transcription || !values.russian} onClick={handleIsEdit}>Сохранить</button>}
                     {isEdit && <button className={ReadListStyles.btn_delete} onClick={deleteWordItem}><FaTrashAlt /></button>}
                 </div>
             </div>

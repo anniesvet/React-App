@@ -132,6 +132,7 @@
     font-size: 20px;
 }
 
-.input {
-    border: 1px solid red;
+input:invalid{
+    border-color: rgb(255, 0, 0);
 }
+
