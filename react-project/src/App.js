@@ -23,15 +23,20 @@ export default function App() {
     ])
 
     const updateWordItem = (values) => {
-        // console.log(values, values.id)
-        // console.log(words)
-        // setWords({
-        //   words: words.map(word => {
-        //     if (values.id === word.id) {
-        //       console.log("Привет")
-        //     } 
-        //   }),
-        // })
+        console.log(values, values.id)
+        console.log(words)
+      
+
+        setWords({
+          words: words.map(word => {
+            if (word.id === values.id) {
+              console.log("привет")
+            }
+            return words
+          }),
+        })
+
+
       };
 
       
