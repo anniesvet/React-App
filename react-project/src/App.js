@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Content from "./components/Content"
 import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
-import WordInfo from './components/WordInfo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
