@@ -5,24 +5,24 @@ import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 function WordInfo ({word, updateWordItem, deleteWordItem}) {
 
-    const [isEdit, setIsEdit] = useState(
+    let [isEdit, setIsEdit] = useState(
         true);
 
-    const [values, setValues] = useState({
+    let [values, setValues] = useState({
         id: word.id,
         english: word.english,
         transcription: word.transcription,
         russian: word.russian,
     })
 
-    const handeleChange = (e) => {
+    let handeleChange = (e) => {
         setValues({
             ...values, [e.target.name] : e.target.value,
         })
         updateWordItem(values)
     }
 
-    const handleIsEdit = () => {
+    let handleIsEdit = () => {
         setIsEdit(!isEdit) 
         updateWordItem(values)
     }

@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
 
-  const [words, setWords]  = useState([
+  let [words, setWords]  = useState([
     {id:1, english:"carrot",transcription:"[ ˈkærət ]",russian:"морковь"},
     {id:2, english:"buttefly",transcription:"[ ˈbʌtəflaɪ ]",russian:"бабочка"},
     {id:3, english:"street", transcription:"[ stri:t ]", russian:"улица"},
@@ -22,7 +22,7 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
-    const updateWordItem = (values) => {
+    let updateWordItem = (values) => {
         console.log(values, values.id)
         console.log(words)
       
@@ -40,7 +40,7 @@ export default function App() {
       };
 
       
-      const deleteWordItem = (id) => {
+      let deleteWordItem = (id) => {
           let newWords = [...words]
           newWords.splice(id, 1)
           setWords(newWords)
