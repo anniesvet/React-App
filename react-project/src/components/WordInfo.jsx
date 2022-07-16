@@ -30,7 +30,7 @@ function WordInfo ({word, updateWordItem, deleteWordItem}) {
     // console.log(values)
     return (
             <div className={ReadListStyles.wrapper}> 
-                <div className={ReadListStyles.number}>{word.id}</div>
+                <div className={ReadListStyles.number}></div>
                 <div className={ReadListStyles.word}> {isEdit ? values.english : <input 
                 type="text"
                 value={values.english}

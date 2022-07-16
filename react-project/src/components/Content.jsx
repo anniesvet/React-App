@@ -3,15 +3,17 @@ import WordInfo from "./WordInfo";
 import ReadListStyles from '../assets/styles/ReadList.module.css';
 
 
-function Content (props) {
+function Content ({words, updateWordItem, deleteWordItem}) {
+
+    console.log(words)
 
     return (
 
-    
+
         <div className={ReadListStyles.main}>
         {
-        props.words.map((word) => (
-            <WordInfo key={word.id} word={word} updateWordItem={props.updateWordItem} deleteWordItem={props.deleteWordItem} />
+        words.map((word) => (
+            <WordInfo key={word.id} word={word} updateWordItem={updateWordItem} deleteWordItem={deleteWordItem} />
         ))}
         </div>
     )

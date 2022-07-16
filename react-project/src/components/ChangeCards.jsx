@@ -5,26 +5,26 @@ import StudyCardStyles from "../assets/styles/StudyCard.module.css";
 
 
 export default function CardSlider({words}) {
-    const [currentItem, setPosition] = useState(0)
+    let [currentItem, setPosition] = useState(0)
     const [button, isClickButton] = useState(false)
     const [count, setCount] = useState(0)
 
-    const showNext = () => {
+    let showNext = () => {
         setPosition(currentItem + 1);
     }
 
-    const showPrev = () => {
+    let showPrev = () => {
         if (currentItem > 0)
         setPosition(currentItem - 1);
     }
 
 
-    const handleClick = () => {
+    let handleClick = () => {
         isClickButton(!button)
         setCount(count + 1)
     };
 
-    const handleClick2 = () => {
+    let handleClick2 = () => {
         isClickButton(!button)
     };
 
