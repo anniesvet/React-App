@@ -26,14 +26,14 @@ export default function App() {
         console.log(words)
       
 
-        setWords({
-          words: words.map(word => {
-            if (word.id === values.id) {
-              words = values
-            }
-            return words
-          }),
-        })
+        // setWords({
+        //   words: words.map(word => {
+        //     if (word.id === values.id) {
+        //       words = values
+        //     }
+        //     return words
+        //   }),
+        // })
 
 
       };

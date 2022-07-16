@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from "react";
+import {React, useState} from "react";
 import { FaPenAlt } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
 import ReadListStyles from '../assets/styles/ReadList.module.css';
