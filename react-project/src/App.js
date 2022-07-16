@@ -21,20 +21,19 @@ export default function App() {
     {id:10,english:"mouse",transcription:"[ maʊs]",russian:"мышь"}
     ])
 
+
     let updateWordItem = (values) => {
-        console.log(values, values.id)
+        console.log(values)
         console.log(words)
-      
 
-        // setWords({
-        //   words: words.map(word => {
-        //     if (word.id === values.id) {
-        //       words = values
-        //     }
-        //     return words
-        //   }),
-        // })
-
+        setWords({
+          words: words.map(word => {
+            if (word.id === values.id) {
+              words = values
+            }
+            return words
+          }),
+        })
 
       };
 
