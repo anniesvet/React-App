@@ -6,6 +6,8 @@ import Error from './components/Error404';
 import CardSlider from './components/ChangeCards';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+
+
 export default function App() {
 
   let [words, setWords]  = useState([
