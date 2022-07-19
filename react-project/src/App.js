@@ -26,8 +26,9 @@ export default function App() {
         console.log(values)
         console.log(words)
 
+
         setWords({
-          words: words.map(word => {
+          words: words.map((word) => {
             if (word.id === values.id) {
               words = values
             }
