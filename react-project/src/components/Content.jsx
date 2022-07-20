@@ -12,7 +12,6 @@ function Content ({words, updateWordItem, deleteWordItem}) {
 
         <div className={ReadListStyles.main}>
         {
-            Array.isArray(words) &&
         words.map((word) => (
             <WordInfo key={word.id} word={word} updateWordItem={updateWordItem} deleteWordItem={deleteWordItem} />
         ))}

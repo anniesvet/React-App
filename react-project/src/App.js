@@ -20,15 +20,20 @@ export default function App() {
     let updateWordItem = (values) => {
         console.log(values)
         console.log(words)
+        console.log(words[0].english)
+        console.log(values.english)
 
-        setWords({
-          words: words.map(word => {
+        setWords( 
+          
+          words.map(word => {
             if (word.id === values.id) {
               words = values
             }
             return words
-          }),
-        })
+          }
+          ),
+          
+        )
 
       };
 
