@@ -20,8 +20,6 @@ export default function App() {
     let updateWordItem = (values) => {
         console.log(values)
         console.log(words)
-        console.log(words[0].english)
-        console.log(values.english)
 
         setWords( 
           
