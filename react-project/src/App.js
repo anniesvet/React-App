@@ -8,12 +8,28 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
 
-  let [words, setWords]  = useState([])
+  let [words, setWords]  = useState([]);
+  let [isLoading, setIsloading] = useState(false);
+  const [hasError, setHasError] = useState(null);
+
 
   useEffect(() => {
+
+    setIsloading(true)
+
     fetch('/api/words')
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) { 
+          return response.json();
+      } else {
+          throw new Error('Something went wrong ...');
+      }
+  })
     .then(response => setWords(response))
+    .catch(error => setHasError(error));
+
+    setIsloading(false)
+    
   },[])
 
 
@@ -43,7 +59,16 @@ export default function App() {
 
           }
 
+    if (isLoading) {
+      return <p>Loading ...</p>; 
+            }
+            
+    if (hasError) {
+        return <p>Упс, ошибка!</p>;
+            }
+
   return (
+
     <BrowserRouter>
       <div className={styles.App}>
         <Header />
