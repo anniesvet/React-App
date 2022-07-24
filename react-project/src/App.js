@@ -33,75 +33,75 @@ export default function App() {
   },[])
 
 
-      let updateWordItem = (values) => {
-        console.log(values)
-        console.log(words)
+      // let updateWordItem = (values) => {
+      //   console.log(values)
+      //   console.log(words)
 
-        setWords( 
+      //   setWords( 
           
-          words.map(word => {
-            if (word.id === values.id) {
-              word = values
-            }
-            return word
-          }
-          ),
+      //     words.map(word => {
+      //       if (word.id === values.id) {
+      //         word = values
+      //       }
+      //       return word
+      //     }
+      //     ),
           
-        )
+      //   )
 
-      };
+      // };
 
 
       // ДОБАВЛЕНИЕ СЛОВА
 
-    // let updateWordItem = (values) => {
-    //         const requestOptions = {
-    //         method: 'POST',
-    //         body: JSON.stringify({
-    //             english: values.english,
-    //             russian: values.russian,
-    //             transcription: values.transcription,
-    //             tags: ""
-    //             })
-    //         };
-    //         fetch(`/api/words/${values.id}/update`, requestOptions)
-    //         .then(response => {
-    //         if (response.ok) {
-    //                 response.json();
-    //             } else {
-    //             throw new Error('Something went wrong ...');
-    //         }})
-    //         .then((response) => {
-    //             console.log(response)
-    //         })
-    //         .catch(error => setHasError(error));
-    //     }
+    let updateWordItem = () => {
+            const requestOptions = {
+            method: 'POST',
+            body: JSON.stringify({
+                english: words.english,
+                russian: words.russian,
+                transcription: words.transcription,
+                tags: ""
+                })
+            };
+            fetch(`/api/words/add`, requestOptions)
+            .then(response => {
+            if (response.ok) {
+                    response.json();
+                } else {
+                throw new Error('Something went wrong ...');
+            }})
+            .then((response) => {
+                console.log(response)
+            })
+            .catch(error => setHasError(error));
+        }
 
         // УДАЛЕНИЕ
 
-      //   let deleteWordItem = (values) => {
-      //     const requestOptions = {
-      //         method: 'POST',
-      //         body: {
-      //             id: values.id
-      //             }
-      //         };
-      //     fetch(`/api/words/${values.id}/delete`, requestOptions)
-      //     .then(response => {
-      //         if (response.ok) {
-      //             response.json();
-      //         } else {
-      //             throw new Error('Something went wrong ...');
-      //         }})
-      // }
+        let deleteWordItem = (values) => {
+          const requestOptions = {
+              method: 'POST',
+              body: {
+                  id: values.id
+                  }
+              };
+          fetch(`/api/words/22/delete`, requestOptions)
+          .then(response => {
+              if (response.ok) {
+                  response.json();
+              } else {
+                  throw new Error('Something went wrong ...');
+              }})
+      }
 
       
-      let deleteWordItem = (id) => {
-          let newWords = [...words]
-          newWords.splice(id, 1)
-          setWords(newWords)
+      // let deleteWordItem = (id) => {
+      //     let newWords = [...words]
+      //     newWords.splice(id, 1)
+      //     setWords(newWords)
 
-          }
+      //     }
 
     if (isLoading) {
       return <p>Loading ...</p>; 
