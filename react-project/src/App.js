@@ -83,10 +83,10 @@ export default function App() {
           const requestOptions = {
               method: 'POST',
               body: {
-                  id: values.id
+                  id: words.id
                   }
               };
-          fetch(`/api/words/22/delete`, requestOptions)
+          fetch(`/api/words/22/${words.id}/delete`, requestOptions)
           .then(response => {
               if (response.ok) {
                   response.json();
