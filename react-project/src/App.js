@@ -79,7 +79,7 @@ export default function App() {
 
         // УДАЛЕНИЕ
 
-        let deleteWordItem = (values) => {
+        let deleteWordItem = () => {
           const requestOptions = {
               method: 'POST',
               body: {
