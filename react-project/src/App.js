@@ -33,7 +33,7 @@ export default function App() {
   },[])
 
 
-    let updateWordItem = (values) => {
+      let updateWordItem = (values) => {
         console.log(values)
         console.log(words)
 
@@ -41,15 +41,59 @@ export default function App() {
           
           words.map(word => {
             if (word.id === values.id) {
-              words = values
+              word = values
             }
-            return words
+            return word
           }
           ),
           
         )
 
       };
+
+
+      // ДОБАВЛЕНИЕ СЛОВА
+
+    // let updateWordItem = (values) => {
+    //         const requestOptions = {
+    //         method: 'POST',
+    //         body: JSON.stringify({
+    //             english: values.english,
+    //             russian: values.russian,
+    //             transcription: values.transcription,
+    //             tags: ""
+    //             })
+    //         };
+    //         fetch(`/api/words/${values.id}/update`, requestOptions)
+    //         .then(response => {
+    //         if (response.ok) {
+    //                 response.json();
+    //             } else {
+    //             throw new Error('Something went wrong ...');
+    //         }})
+    //         .then((response) => {
+    //             console.log(response)
+    //         })
+    //         .catch(error => setHasError(error));
+    //     }
+
+        // УДАЛЕНИЕ
+
+      //   let deleteWordItem = (values) => {
+      //     const requestOptions = {
+      //         method: 'POST',
+      //         body: {
+      //             id: values.id
+      //             }
+      //         };
+      //     fetch(`/api/words/${values.id}/delete`, requestOptions)
+      //     .then(response => {
+      //         if (response.ok) {
+      //             response.json();
+      //         } else {
+      //             throw new Error('Something went wrong ...');
+      //         }})
+      // }
 
       
       let deleteWordItem = (id) => {
@@ -64,7 +108,7 @@ export default function App() {
             }
             
     if (hasError) {
-        return <p>Упс, ошибка!</p>;
+        return <p>Упс, ошибка вышла!</p>;
             }
 
   return (
